@@ -1,0 +1,30 @@
+Write an algorithm that determines whether all the elements in a string are unique. You may not convert the string into an array or use array methods to solve this problem. The algorithm should return a boolean.
+
+Example
+Input: "hello"
+Output: false
+
+Input: "copyright"
+Output: true
+
+no need to worry about spaces (if worried, use continue)
+    //if i = " "
+        //  continue
+no need to worry about case sensitivity (if worried, use toLowerCase())
+
+Without recursion:
+
+//for loop, nested for loop
+
+function isUnique(inputStr) {
+    for (let i=0; i<inputStr.length; i++) {
+        for (let j=i+1; j<inputStr.length; j++)
+        if (inputStr[i] === inputStr[j]) {
+            return false
+        }
+    } return true;
+}
+
+let inputStr = "hello"
+inUnique(inputStr); false
+
